@@ -8,8 +8,24 @@
 <body>
 
 <!-- HEADER WITH LOGO -->
-<div>
+<div class="header">
     <img src="logo.svg" alt="Deakin Logo" width="200">
+</div>
+
+<!-- NAVIGATION BAR -->
+<nav>
+    <a href="https://www.deakin.edu.au">Home</a>
+    <a href="https://www.deakin.edu.au/courses">Handbook</a>
+    <a href="https://www.deakin.edu.au/students/enrolment-and-fees/manage-your-course/handbooks">Enrolment</a>
+    <a href="https://www.deakin.edu.au/students/study-support/study-timetables">Timetable</a>
+    <a href="https://www.deakin.edu.au/contact">Contact</a>
+</nav>
+
+<!-- SEARCH BAR -->
+<div class="search-container">
+    <h3>Search Deakin</h3>
+    <input type="text" id="searchInput" placeholder="Search for a unit, course or topic..."/>
+    <button onclick="searchDeakin()">Search</button>
 </div>
 
 <h1>SIT223-SIT753 - Professional Practice in IT</h1>
@@ -54,10 +70,41 @@
     To be eligible to obtain a pass in this unit, students must meet certain milestones as part of the portfolio.
 </p>
 
-<!-- LINK -->
-<a href="https://www.deakin.edu.au/students/enrolment-and-fees/fees">
-    > Current students
-</a>
+<!-- QUICK LINKS -->
+<div class="quick-links">
+    <h2>Quick Links</h2>
+    <a href="https://www.deakin.edu.au/courses" class="btn">Course Search</a>
+    <a href="https://www.deakin.edu.au/students/study-support/handbooks" class="btn">Unit Handbook</a>
+    <a href="https://www.deakin.edu.au/students/enrolment-and-fees/fees" class="btn">Enrolment & Fees</a>
+    <a href="https://deakin.edu.au/students" class="btn">Student Portal</a>
+    <a href="https://handbook.deakin.edu.au/courses-search/unit-search.php?chkSortby=unit_cd&hidCurrentYear=2025&hidType=max&hidYear=2025&selLevel=Select&selLocation=Select&selMode=Select&selSemester=Select&txtKeyword=" class="btn">Programs & Courses</a>
+    <a href="https://www.deakin.edu.au/students/study-support/study-timetables" class="btn">Timetable</a>
+</div>
+
+<!-- CONTACT SECTION -->
+<div class="contact-section">
+    <h2>Need Help?</h2>
+    <p>Reach out to us through any of the options below.</p>
+    <a href="mailto:azadeh.gharineiat@deakin.edu.au" class="btn-outline">Email Unit Chair</a>
+    <a href="https://www.deakin.edu.au/contact" class="btn-outline">Contact Deakin</a>
+    <a href="https://www.deakin.edu.au/students/study-support" class="btn-outline">Study Support</a>
+</div>
+
+<!-- FOOTER LINK -->
+<div class="footer">
+    <a href="https://www.deakin.edu.au/students/enrolment-and-fees/fees">
+        > Current students
+    </a>
+</div>
+
+<script>
+    function searchDeakin() {
+        const query = document.getElementById("searchInput").value;
+        if (query.trim() !== "") {
+            window.open("https://www.deakin.edu.au/search#q=" + encodeURIComponent(query), "_blank");
+        }
+    }
+</script>
 
 </body>
 </html>
